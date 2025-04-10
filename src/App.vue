@@ -12,6 +12,7 @@
           <div class="hidden md:flex items-center space-x-4">
             <router-link to="/" class="py-4 px-2 text-white hover:text-red-600 transition duration-300">Home</router-link>
             <router-link to="/about" class="py-4 px-2 text-white hover:text-red-600 transition duration-300">About</router-link>
+            <router-link to="/login" class="py-4 px-2 text-white hover:text-red-600 transition duration-300">Login</router-link>
           </div>
         </div>
       </div>
