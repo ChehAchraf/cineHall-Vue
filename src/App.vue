@@ -1,25 +1,52 @@
 <script setup>
+// Main App component
+import DebugInfo from './components/DebugInfo.vue';
 </script>
 
 <template>
-  <nav class="bg-black shadow-lg">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex space-x-7">
-          <div class="flex items-center">
-            <span class="text-2xl font-semibold text-red-600">CinemaVue</span>
-          </div>
-          <div class="hidden md:flex items-center space-x-4">
-            <router-link to="/" class="py-4 px-2 text-white hover:text-red-600 transition duration-300">Home</router-link>
-            <router-link to="/about" class="py-4 px-2 text-white hover:text-red-600 transition duration-300">About</router-link>
-            <router-link to="/login" class="py-4 px-2 text-white hover:text-red-600 transition duration-300">Login</router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
   <router-view />
+  <DebugInfo />
 </template>
 
-<style scoped>
+<style>
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #F5F5F1;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1F1F1F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E50914;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b70710;
+}
 </style>
